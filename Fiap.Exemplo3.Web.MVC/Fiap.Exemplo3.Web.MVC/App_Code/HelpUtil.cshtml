@@ -1,0 +1,14 @@
+﻿@helper Message(string mensagem) {
+if (mensagem != null)
+{
+            <div class="alert alert-success">
+                @mensagem
+            </div>
+    }
+}
+
+@helper Button(string actionName)
+{
+    <input type="submit" value="@actionName" class="btn btn-primary" />
+}
+
