@@ -5,16 +5,15 @@
 }
 
 <h2>Cadastro de Pet</h2>
-@if (TempData["msg"] != null)
-{
-    <div class="alert alert-success">
-        @TempData["msg"]
-        @ViewBag.mensagem
-    </div>
-}
+
+@Banana.Message(TempData["msg"] as string)
 
 @using (Html.BeginForm())
 {
+    <div class="form-group">
+        @Html.LabelFor(p => p.Especie)
+        @Html.DropDownListFor(p => p.Especie, ViewBag.opcoes as SelectList, new {@class="form-control"})
+    </div>
     <div class="form-group">
         @Html.LabelFor(p => p.Nome)
         @Html.TextBoxFor(pet => pet.Nome, new { @class = "form-control" })
@@ -31,6 +30,7 @@
         @Html.LabelFor(p => p.Castrado)
         @Html.CheckBoxFor(p => p.Castrado)
     </div>
-    <input type="submit" class="btn btn-default" />
+
+    @Banana.Submit("Cadastrar")
 }
 

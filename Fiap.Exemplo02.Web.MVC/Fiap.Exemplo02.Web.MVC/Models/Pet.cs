@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -12,6 +13,7 @@ namespace Fiap.Exemplo02.Web.MVC.Models
         private bool castrado;
         private string descricao;
         private DateTime dataNascimento;
+        private string especie;
 
         public int Codigo
         {
@@ -28,16 +30,24 @@ namespace Fiap.Exemplo02.Web.MVC.Models
             get { return castrado; }
             set { castrado = value; }
         }
+        [Display(Name = "Descrição")]
         public string Descricao
         {
             get { return descricao; }
             set { descricao = value; }
         }
-
+        
+        [Display(Name ="Data Nascimento")]        
         public DateTime DataNascimento
         {
             get { return dataNascimento; }
             set { dataNascimento = value; }
+        }
+        [Display(Name = "Espécie")]
+        public String Especie
+        {
+            get { return especie; }
+            set { especie = value; }
         }
     }
 }

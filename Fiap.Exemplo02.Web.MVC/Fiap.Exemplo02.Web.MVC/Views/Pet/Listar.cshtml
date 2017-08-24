@@ -18,14 +18,8 @@
     </thead>
     <tbody>
         @foreach (var item in @Model)
-        {            
-            <tr>
-                <td>@item.Codigo</td>
-                <td>@item.Nome</td>
-                <td>@item.Descricao</td>
-                <td>@item.DataNascimento.ToShortDateString()</td>
-                <td>@item.Castrado</td>
-            </tr>
+        {
+            @Html.Partial("_linhaTabela", item);
         }
     </tbody>
 </table>

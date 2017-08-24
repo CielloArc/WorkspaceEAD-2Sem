@@ -15,7 +15,17 @@ namespace Fiap.Exemplo02.Web.MVC.Controllers
         [HttpGet]
         public ActionResult Cadastro()
         {
+            
+            List<string> especies = new List<string>();
+            especies.Add("Cachorro");
+            especies.Add("Gato");
+            especies.Add("Ave");
+            especies.Add("Réptil");
+            especies.Add("Peixe");
+            especies.Add("Outro");
+            ViewBag.opcoes = new SelectList(especies);
             return View();
+
         }
 
 
@@ -25,8 +35,8 @@ namespace Fiap.Exemplo02.Web.MVC.Controllers
             banco.Add(pet);
             TempData["msg"] = "Pet cadastrado!";
             ViewBag.mensagem = "Gravado!";
-
-            return View();
+            //return View();
+            return RedirectToAction("Cadastro");
         }
 
         public ActionResult Listar()
