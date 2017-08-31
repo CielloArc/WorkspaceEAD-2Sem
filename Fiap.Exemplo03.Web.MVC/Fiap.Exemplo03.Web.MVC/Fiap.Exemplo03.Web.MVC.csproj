@@ -9,12 +9,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{752526FC-17D2-4269-90FB-A64FFBD2D200}</ProjectGuid>
+    <ProjectGuid>{3C1CC370-8261-4AC3-AC15-404A4BB3E552}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Fiap.Exemplo3.Web.MVC</RootNamespace>
-    <AssemblyName>Fiap.Exemplo3.Web.MVC</AssemblyName>
+    <RootNamespace>Fiap.Exemplo03.Web.MVC</RootNamespace>
+    <AssemblyName>Fiap.Exemplo03.Web.MVC</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -134,7 +134,6 @@
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
-    <Content Include="App_Code\HelpUtil.cshtml" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
@@ -143,12 +142,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\LoteriaController.cs" />
+    <Compile Include="Controllers\ApostaController.cs" />
+    <Compile Include="Controllers\ApostadorController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="LoteriaContext.cs" />
+    <Compile Include="Models\Aposta.cs" />
     <Compile Include="Models\Apostador.cs" />
-    <Compile Include="Models\Persistencia\LoteriaContext.cs" />
+    <Compile Include="Persistencia\LoteriaContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -159,11 +162,17 @@
     </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Loteria\Cadastrar.cshtml" />
+    <Content Include="Views\Apostador\Cadastrar.cshtml" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Apostador\Listar.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Apostador\Alterar.cshtml" />
+    <Content Include="Views\Aposta\Cadastrar.cshtml" />
+    <Content Include="Views\Aposta\Listar.cshtml" />
+    <Content Include="Views\Aposta\Alterar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -187,9 +196,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>10977</DevelopmentServerPort>
+          <DevelopmentServerPort>37226</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:10977/</IISUrl>
+          <IISUrl>http://localhost:37226/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

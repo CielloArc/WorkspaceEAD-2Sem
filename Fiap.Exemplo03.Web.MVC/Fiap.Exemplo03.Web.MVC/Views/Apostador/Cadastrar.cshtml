@@ -1,22 +1,26 @@
-﻿@model Fiap.Exemplo3.Web.MVC.Models.Apostador
-
-
+﻿@model Fiap.Exemplo03.Web.MVC.Models.Apostador
 @{
     ViewBag.Title = "Cadastrar";
 }
 
 <h2>Cadastrar</h2>
 
-@HelpUtil.Message(TempData["msg"] as string)
+@if (TempData["msg"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["msg"]
+    </div>
+}
 
-@using (Html.BeginForm()) { 
+@using (Html.BeginForm())
+{
     <div class="form-group">
-        @Html.LabelFor(a => a.Nome)
-        @Html.TextBoxFor(a => a.Nome, new { @class = "form-control"})
+        @Html.LabelFor(a=> a.Nome)
+        @Html.TextBoxFor(a=> a.Nome, new { @class = "form-control"})
     </div>
     <div class="form-group">
         @Html.LabelFor(a => a.Email)
-        @Html.TextBoxFor(a => a.DataNascimento, new { @class = "form-control" })
+        @Html.TextBoxFor(a => a.Email, new { @class = "form-control" })
     </div>
     <div class="form-group">
         @Html.LabelFor(a => a.DataNascimento)
@@ -26,5 +30,7 @@
         @Html.LabelFor(a => a.Saldo)
         @Html.TextBoxFor(a => a.Saldo, new { @class = "form-control" })
     </div>
-  @HelpUtil.Button("Cadastar")
+
+    <input type="submit" value="Cadastrar" class="btn btn-primary" />
+
 }

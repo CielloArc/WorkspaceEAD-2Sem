@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fiap.Exemplo3.Web.MVC", "Fiap.Exemplo3.Web.MVC\Fiap.Exemplo3.Web.MVC.csproj", "{752526FC-17D2-4269-90FB-A64FFBD2D200}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fiap.Exemplo03.Web.MVC", "Fiap.Exemplo03.Web.MVC\Fiap.Exemplo03.Web.MVC.csproj", "{3C1CC370-8261-4AC3-AC15-404A4BB3E552}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{752526FC-17D2-4269-90FB-A64FFBD2D200}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{752526FC-17D2-4269-90FB-A64FFBD2D200}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{752526FC-17D2-4269-90FB-A64FFBD2D200}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{752526FC-17D2-4269-90FB-A64FFBD2D200}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C1CC370-8261-4AC3-AC15-404A4BB3E552}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C1CC370-8261-4AC3-AC15-404A4BB3E552}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C1CC370-8261-4AC3-AC15-404A4BB3E552}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C1CC370-8261-4AC3-AC15-404A4BB3E552}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

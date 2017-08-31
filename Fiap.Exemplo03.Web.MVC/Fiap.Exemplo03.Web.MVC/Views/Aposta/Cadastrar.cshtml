@@ -1,0 +1,33 @@
+﻿@model Fiap.Exemplo03.Web.MVC.Models.Aposta
+
+@{
+    ViewBag.Title = "Cadastrar";
+}
+
+<h2>Cadastrar</h2>
+
+@if (TempData["msg"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["msg"]
+    </div>
+}
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.LabelFor(a => a.Valor)
+        @Html.TextBoxFor(a => a.Valor, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(a => a.DataAposta)
+        @Html.TextBoxFor(a => a.DataAposta, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(a => a.Dobradinha)
+        @Html.CheckBoxFor(a => a.Dobradinha, new { @class = "checkbox" })
+    </div>
+
+    <input type="submit" value="Cadastrar" class="btn btn-primary" />
+}
+
