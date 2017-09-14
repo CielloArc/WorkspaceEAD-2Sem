@@ -1,0 +1,29 @@
+﻿@model Fiap.Exemplo04.Web.MVC.Models.Jogador
+
+@{
+    ViewBag.Title = "Cadastro";
+}
+
+<h2>Cadastro de Jogador</h2>
+
+@if (TempData["msg"] != null)
+{
+    <div class="alert alert-info">
+        @TempData["msg"]
+    </div>
+}
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.LabelFor(j => j.Nome)
+        @Html.TextBoxFor(j => j.Nome, new {@class = "form-control"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(j => j.Numero)
+        @Html.TextBoxFor(j => j.Numero, new {@class = "form-control"})
+    </div>
+}
+
+
+
