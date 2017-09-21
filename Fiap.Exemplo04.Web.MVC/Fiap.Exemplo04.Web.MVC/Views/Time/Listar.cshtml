@@ -16,6 +16,7 @@
         <th>Nome</th>
         <th>Data Fundacao</th>
         <th>Tecnico</th>
+        <th>Ações</th>
     </tr>
     @foreach (var item in Model)
     {
@@ -23,6 +24,15 @@
             <td>@item.Nome</td>
             <td>@item.DataFundacao.ToShortDateString()</td>
             <td>@item.Tecnico.Nome</td>
+            <td>@item.Tecnico.Salario</td>
+            <td>@Html.ActionLink(" ", "Alterar"
+                            , new { id = item.TimeId }
+                            , new { @class = "glyphicon glyphicon-pencil btn btn-xs btn-primary" })
+                @Html.ActionLink(" ", "Remover",
+                            new { id = item.TimeId }
+                            , new { @class = "glyphicon glyphicon-trash btn btn-xs btn-danger" })
+
+        </td>
         </tr>
     }
 </table>

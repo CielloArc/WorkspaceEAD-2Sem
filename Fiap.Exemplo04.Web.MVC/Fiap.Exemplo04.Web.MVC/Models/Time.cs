@@ -33,13 +33,15 @@ namespace Fiap.Exemplo04.Web.MVC.Models
         }
 
 
-        //Relacionamento
+        //Relacionamento 1:1
         public Tecnico Tecnico { get; set; }
         public int TecnicoId { get; set; }
 
 
+        //Relacionamento 1:N
         public List<Jogador> Jogadores { get; set; }
 
+        //Relacionamento 1:BANANA
         public List<Campeonato> Campeonatos { get; set; }
 
 
