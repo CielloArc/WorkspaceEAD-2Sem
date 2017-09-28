@@ -1,0 +1,35 @@
+﻿@model List<Fiap.Exemplo04.Web.MVC.Models.Jogador>
+@{
+    ViewBag.Title = "Listar";
+}
+
+<h2>Listar</h2>
+@if (TempData["msg"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["msg"]
+    </div>
+}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Numero</th>
+            <th>Time</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Nome</td>
+                <td>@item.Numero</td>
+                <td>@item.Time.Nome</td>
+                <td></td>
+            </tr>
+        }
+    </tbody>
+</table>
+

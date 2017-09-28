@@ -11,7 +11,6 @@ namespace Fiap.Exemplo04.Web.MVC.Repositories
 {
     public class JogadorRepository: IJogadorRepository
     {
-
         private FutebolContext _context;
 
         public JogadorRepository(FutebolContext context)

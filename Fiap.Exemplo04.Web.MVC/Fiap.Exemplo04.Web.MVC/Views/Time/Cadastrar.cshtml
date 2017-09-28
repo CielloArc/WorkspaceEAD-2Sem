@@ -23,16 +23,17 @@
         @Html.LabelFor(t => t.DataFundacao)
         @Html.TextBoxFor(t => t.DataFundacao, new {@class = "form-control" })
     </div>
-
-    <h1>Tecnico</h1>
-    <div class="form-group">
-        @Html.LabelFor(t => t.Tecnico.Nome)
-        @Html.TextBoxFor(t => t.Tecnico.Nome, new { @class = "form-control" })
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(t => t.Tecnico.Salario)
-        @Html.TextBoxFor(t => t.Tecnico.Salario, new { @class = "form-control" })
-    </div>
+    <fieldset>
+        <legend>Tecnico</legend>       
+        <div class="form-group">
+            @Html.LabelFor(t => t.Tecnico.Nome)
+            @Html.TextBoxFor(t => t.Tecnico.Nome, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(t => t.Tecnico.Salario)
+            @Html.TextBoxFor(t => t.Tecnico.Salario, new { @class = "form-control" })
+        </div>
+    </fieldset>
 
     <input type="submit" value="Cadastrar" class="btn btn-primary" />
 }
