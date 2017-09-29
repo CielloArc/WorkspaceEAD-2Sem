@@ -1,0 +1,46 @@
+﻿@model List<Exercicio03.Models.Filme>
+@{
+    ViewBag.Title = "Listar";
+}
+
+<h2>Listar</h2>
+@if (TempData["msg"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["msg"]
+    </div>
+}
+
+<table class="table table-striped">    
+    <thead>
+        <tr>
+            <th>Titulo</th>
+            <th>Genero</th>
+            <th>Duracao</th>
+            <th>Data de Lancamento</th>
+            <th>Produtora</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Titulo</td>
+                <td>@item.Genero</td>
+                <td>@item.Duracao</td>
+                <td>@item.DataLancamento.ToShortDateString()</td>
+                <td>@item.Produtora.Nome</td>
+                <td>
+                    @Html.ActionLink(" ", "Alterar",
+                        new { id = item.FilmeId },
+                        new { @class = "glyphicon glyphicon-pencil btn btn-xs btn-primary" })
+                @Html.ActionLink(" ", "Remover",
+                        new { id = item.FilmeId },
+                        new { @class = "glyphicon glyphicon-trash btn btn-xs btn-danger" })
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
