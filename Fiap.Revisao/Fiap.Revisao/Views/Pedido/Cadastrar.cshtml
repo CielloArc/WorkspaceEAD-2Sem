@@ -1,0 +1,33 @@
+﻿@model Fiap.Revisao.Models.Pedido
+@{
+    ViewBag.Title = "Cadastrar";
+}
+
+<h2>Cadastrar</h2>
+
+@using (Html.BeginForm())
+{
+    <fieldset>
+        <legend>Pedido</legend>
+        <div class="form-group">
+            @Html.LabelFor(p =>p.Valor)
+            @Html.TextBoxFor(p => p.Valor, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(p => p.Data)
+            @Html.TextBoxFor(p => p.Data, new { @class = "form-control"})
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Cliente</legend>
+        <div class="form-group">
+            @Html.LabelFor(p => p.Cliente)
+            @Html.DropDownListFor(p => p.ClienteId,
+           ViewBag.clientes as SelectList,
+           "Selecione...",
+           new { @class = "form-control" })
+        </div>
+    </fieldset>
+    <input type="submit" value="Cadastar" class="btn btn-primary" />
+}
+
